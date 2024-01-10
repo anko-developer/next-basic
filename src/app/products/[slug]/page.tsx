@@ -7,6 +7,8 @@ export function generateMetadata({ params }: Props) {
   };
 }
 
+export const revalidate = 3000;
+
 type Props = {
   params: {
     slug: string;
