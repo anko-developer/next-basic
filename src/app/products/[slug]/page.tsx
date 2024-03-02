@@ -1,26 +1,30 @@
+import { getProduct, getProducts } from "@/api/products";
+
 type Props = {
   params: {
     slug: string
   }
 }
 
-export function generateMetadata({ params } : Props) {
+export function generateMetadata({ params: {slug} } : Props) {
   return {
-    title: `제품의 이름: ${params.slug}`
+    title: `제품의 이름: ${slug}`
   }
 }
 
-export default function page({ params } : Props) {
+export default async function ProductPage({ params: {slug} } : Props) {
+  const product = await getProduct(slug);
+
   return (
     <div>
-      { params.slug } 제품 설명 페이지
+      { product?.name && '제품 설명 페이지!!!' }
     </div>
   );
 }
 
-export function generateStaticParams() {
-  const products = ['pants', 'skirt'];
+export async function generateStaticParams() {
+  const products = await getProducts();
   return products.map(product => ({
-    slug: product
+    slug: product.id
   }));
 }
