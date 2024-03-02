@@ -6,6 +6,11 @@
   border-bottom: 1px solid #132f52;
 }
 
+.nav {
+  display: flex;
+  gap: 10px;
+}
+
 .nav a {
-  padding: 0 8px;
+
 }
