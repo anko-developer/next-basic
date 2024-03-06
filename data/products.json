@@ -3,7 +3,7 @@
     "id": "1234",
     "name": "청바지",
     "price": 5000,
-    "image": "dog.jpg"
+    "image": "jeans.jpg"
   },
   {
     "id": "1235",
@@ -16,5 +16,11 @@
     "name": "부츠",
     "price": 5000,
     "image": "shoes.jpg"
+  },
+  {
+    "id": "1237",
+    "name": "그냥옷",
+    "price": 5000,
+    "image": "clothes.jpg"
   }
 ]
